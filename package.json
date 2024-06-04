@@ -32,5 +32,25 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.8.2"
-  }
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My little page",
+  "main": "src/main.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ken-morel/porfolio.git"
+  },
+  "keywords": [
+    "angular",
+    "nodejs",
+    "portfolio",
+    "ken-morel"
+  ],
+  "author": "ken-morel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ken-morel/porfolio/issues"
+  },
+  "homepage": "https://github.com/ken-morel/porfolio#readme"
 }

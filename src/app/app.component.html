@@ -7,6 +7,55 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+{% load static %}
+{% load markdown %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ken-morel</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="search" href="/search" />
+        <link rel="author" href="https://github.com/ken-morel/" />
+        <style type="text/css" media="screen">
+            html-s
+            {
+                background-image: linear-gradient(to bottom, #001115, #001511);
+            }
+        </style>
+    </head>
+    <body>
+        <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+        <script>
+            kofiWidgetOverlay.draw('kenmorel', {
+                'type': 'floating-chat',
+                'floating-chat.donateButton.text': 'Donate',
+                'floating-chat.donateButton.background-color': '#441122',
+                'floating-chat.donateButton.text-color': '#fff'
+            });
+        </script>
+
+        <div>
+            <div class="w3-container w3-leftbar w3-center w3-large">
+                {% markdown 'intro.md' %}
+            </div>
+            <h1 class="w3-dark-blue w3-round-large w3-cursive w3-center">who am I?</h1>
+            <p class="w3-dark-green w3-padding-large w3-container w3-pale-blue w3-padding-64">
+                <img src="{% static 'ama.png' %}" height="300" class="w3-circle" />
+                <span class="w3-right-align w3-right w3-xxlarge">
+                    <quote>
+                        A full-stack web developer
+                    </quote>
+                </span>
+            </p>
+        </div>
+        <div>
+            <img src="/counters/portfolio/add.svg" alt="">
+        </div>
+
+    </body>
+</html>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

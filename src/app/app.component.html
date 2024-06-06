@@ -17,16 +17,19 @@
             background: #222;
             overflow: hidden;
         }
+        #intro
+        {
+            background-image:
+                linear-gradient(to bottom, #123b, #000),
+                url('https://github.com/ken-morel/ken-morel/raw/main/ama.svg');
+        }
         #main
         {
             margin-left: 120px;
         }
         #home
         {
-            background-image:
-                linear-gradient(to bottom, #123a, #112f),
-                url('https://github.com/ken-morel/ken-morel/raw/main/ama.svg');
-            background-size: 50%;
+            background-size: 100%;
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -70,7 +73,7 @@
       </div>
     </div>
     <div id="main">
-        <div class="w3-black">
+        <div id="intro">
             <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
             <script>
                 kofiWidgetOverlay.draw('kenmorel', {

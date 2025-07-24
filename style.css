@@ -1,20 +1,94 @@
 
 Screen {
-    align: center middle;
+    align: center top;
+    background: #0A0A0A;
+    color: #E0E0E0;
+    overflow-y: auto;
 }
 
-#title {
-    text-align: center;
+.nav-hint {
     width: 100%;
+    text-align: center;
+    color: #606060;
     margin-bottom: 1;
 }
 
-#subtitle {
+.title {
     text-align: center;
     width: 100%;
-    margin-bottom: 2;
+    margin: 1 0 2 0;
+    color: #00A8CC;
+}
+
+.subtitle {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1;
+    text-style: bold;
+    color: #C0C0C0;
+}
+
+.statement {
+    margin: 1;
+    text-align: justify;
+}
+
+.list-item {
+    margin: 1 2;
 }
 
 TabPane {
-    padding: 2 5;
+    padding: 1 4;
+}
+
+/* --- Row Containers for Alignment --- */
+.row {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1;
+}
+.row-center {
+    align-horizontal: center;
+}
+.row-left {
+    align-horizontal: left;
+}
+.row-right {
+    align-horizontal: right;
+}
+
+/* --- Card Layout --- */
+.card {
+    background: #1A1A1A;
+    border: round #00A8CC;
+    padding: 1 2;
+    width: 80%;
+    height: auto;
+    transition: border 0.2s;
+}
+
+.card:hover {
+    border: round #FFFFFF;
+}
+
+.skill-block {
+    align: left middle;
+    height: auto;
+}
+
+.dev-icon {
+    margin-right: 2;
+    width: 8;
+    height: 6;
+    text-align: center;
+    color: #00A8CC;
+}
+
+.dev-icon-right {
+    margin-right: 0;
+    margin-left: 2;
+}
+
+.skill-description {
+    width: 1fr;
 }

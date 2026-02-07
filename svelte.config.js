@@ -6,8 +6,8 @@ import adapter from '@sveltejs/adapter-node';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: { adapter: adapter() },
-	preprocess: [vitePreprocess(), mdsvex()],
-	extensions: ['.svelte', '.svx']
+	preprocess: [mdsvex(), vitePreprocess()],
+	extensions: ['.md', '.svelte', '.svx']
 };
 
 export default config;

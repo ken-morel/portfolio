@@ -1,9 +1,30 @@
 <script lang="ts">
   import { scale } from "svelte/transition";
   let { children } = $props();
+  import { scrollToPerc } from "$lib/ghostty";
+  import { onMount } from "svelte";
+
+  let scrolldown = $derived($scrollToPerc);
+  let scrollContainer: HTMLDivElement;
+
+  onMount(() => {
+    let nextScroll = false;
+    const interval = setInterval(() => {
+      if ((scrolldown || nextScroll) && scrollContainer) {
+        scrollContainer.scrollTo({
+          top: scrollContainer.scrollHeight,
+          behavior: "smooth",
+        });
+        nextScroll = scrolldown; // scroll one time pass it
+      }
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  });
 </script>
 
-<div class="ghostty-window" transition:scale>
+<div bind:this={scrollContainer} class="ghostty-window" transition:scale>
   <div class="content">
     {@render children?.()}
   </div>
@@ -28,10 +49,13 @@
 
   letter-spacing: .05em
 
-
   .content
     width: 100%
     height: 100%
     padding: 7px
+:global(.ghostty-window)
+  *
+    font-family: "FiraCode Nerd Font Mono", monospace !important;
+
 
 </style>

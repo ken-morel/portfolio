@@ -26,6 +26,7 @@
 
 <style lang="sass">
 div.waybar-time
+  margin: 5px 0
   span
     color: #aa77aa
     margin: 0px 2px 0px 2px;

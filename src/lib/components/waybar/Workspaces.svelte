@@ -1,9 +1,5 @@
 <script lang="ts">
-  import {
-    workspaces,
-    currentWorkspace,
-    type Workspace,
-  } from "$lib/workspaces";
+  import { workspaces, currentWorkspace } from "$lib/workspaces";
 </script>
 
 <div class="workspaces-container">
@@ -16,8 +12,8 @@
 
 <style lang="sass">
 .workspaces-container
-  border-top: 1px solid #557755;
-  border-bottom: 1px solid #557755;
+  border-top: 1px solid #242;
+  border-bottom: 1px solid #242;
   margin-top: 5px;
   margin-bottom: 5px;
   padding-top: 0px;

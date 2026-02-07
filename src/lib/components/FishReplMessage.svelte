@@ -3,6 +3,7 @@
   import { type ReplMessage } from "./FishRepl.svelte";
   import { sleep } from "$lib";
   import { marked } from "marked";
+  import { scrollToPerc } from "$lib/ghostty";
 
   let {
     message,
@@ -34,12 +35,14 @@
       await sleep(interval + (faster ? -100 : 0));
     }
     showcaret = false;
+    scrollToPerc.set(true);
     for (let i = 0; i <= message.output.length; i++) {
       renderedOutput = marked.parse(message.output.slice(0, i), {
         async: false,
       });
       await sleep(1000 / outputspeed);
     }
+    scrollToPerc.set(false);
     onFinish();
   });
 </script>
@@ -60,11 +63,10 @@
       {/if}
     </span>
   </div>
-  <div class="output">{@html renderedOutput}</div>
+  <div class="markdown-shell-output">{@html renderedOutput}</div>
 </div>
 
 <style lang="sass">
-
 div.message
   & > div.prompt
     & > span
@@ -87,4 +89,9 @@ div.message
         white-space: nowrap
         & > span.caret
           border: 0.5px solid #ccc
+
+:global(div.output table)
+  padding: 5px
+  & > thead > *
+    padding: 2px
 </style>

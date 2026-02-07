@@ -9,7 +9,7 @@
 
 <style lang="sass">
 .tray-widget
-  margin: auto
+  margin: 10px auto
   align-items: center
   position: relative
   width: fit-content

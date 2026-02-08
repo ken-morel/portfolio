@@ -1,5 +1,11 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import FishRepl, { type ReplMessage } from "$lib/components/FishRepl.svelte";
+  import { windowTitle } from "$lib/components/waybar/WindowTitle.svelte";
+
+  onMount(() => {
+    windowTitle.set("kenmorel@jealomy: ~");
+  });
 
   const messages: ReplMessage[] = [
     {

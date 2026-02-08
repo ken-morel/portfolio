@@ -1,5 +1,4 @@
 <div class="background"></div>
-Hello
 
 <style lang="scss">
   div.background {

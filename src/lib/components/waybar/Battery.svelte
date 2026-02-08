@@ -45,8 +45,14 @@
 <style lang="sass">
 div.battery
   font-family: "FiraCode Nerd Font Mono"
+  font-size: 18px
+  padding: 0 10px
+  display: flex
+  align-items: center
+  height: 100%
+
   &.charging
-    color: #374
+    color: #b8bb26 // Gruvbox Green
   &.low
-    color: #743
+    color: #fb4934 // Gruvbox Red
 </style>

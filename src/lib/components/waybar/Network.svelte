@@ -38,10 +38,10 @@
 
 
   .online-icon
-    color: #8fbcbb // Cyan/Green for online
+    color: #b8bb26 // Gruvbox Green for online
 
 
   .offline-icon
-    color: #bf616a // Red for offline
+    color: #fb4934 // Gruvbox Red for offline
 
 </style>

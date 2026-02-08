@@ -5,43 +5,51 @@
   import NWGBar from "./waybar/NWGBar.svelte";
   import Battery from "./waybar/Battery.svelte";
   import Network from "./waybar/Network.svelte";
+  import WindowTitle from "./waybar/WindowTitle.svelte"; // Import the new component
+  import { onMount } from "svelte";
+  import { windowTitle } from "./waybar/WindowTitle.svelte";
+  onMount(() => {
+    windowTitle.set("kenmorel@jealomy: ~");
+  });
 </script>
 
 <div class="waybar">
   <div class="left">
-    <Time />
-    <Spotify />
-  </div>
-  <div class="center">
     <Workspaces />
   </div>
+  <div class="center">
+    <WindowTitle />
+  </div>
   <div class="right">
-    <Network />
+    <Spotify />
     <Battery />
+    <Network />
     <NWGBar />
+    <Time />
   </div>
 </div>
 
 <style lang="sass">
 .waybar
-  background-color: transparent
+  background-color: #1e1e2e; // As per new spec
   color: #dcd7ba;
   padding: 0
-  border-radius: 5px
+  border-radius: 0; // Removed border-radius
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-  width: 35px
-  margin:
-    top: 3px
+  width: 100%; // Horizontal bar
+  height: 32px; // Fixed height as per new spec
+  margin: 0; // Removed top margin
   text-align: center
   display: flex;
-  flex-direction: column;
+  flex-direction: row; // Horizontal bar
   justify-content: space-between;
-  align-items: flex-start;
-  height: 100%
+  align-items: center; // Vertically center items
 
   div.left,
   div.center,
   div.right
-    display: inline-block
-    width: 100%
+    display: flex; // Use flex for internal alignment
+    align-items: center;
+    // width: auto; // Let content dictate width
+    height: 100%; // Fill Waybar height
 </style>

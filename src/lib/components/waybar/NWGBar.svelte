@@ -59,12 +59,18 @@
 
 <style lang="sass">
 div.nwg-bar
-  width: 100%
-  text-align: center
+  display: flex
+  align-items: center
+  height: 100%
+  
   & > button
-    width: 100%
-    display: block
-    font-size: 25px
+    height: 100%
+    padding: 0 12px
+    font-size: 20px
+    color: #fb4934 // Gruvbox Red for power button
+    &:hover
+      background-color: #3c3836 // Gruvbox dark grey
+      
 dialog
   width: 100%
   height: 100%
@@ -80,19 +86,19 @@ dialog
     & > div
       height: fit-content
       width: fit-content
-      background-color: #050a03
-      border-radius: 5px
+      background-color: #282828 // Match Gruvbox background
+      border: 1px solid #a89984 // Gruvbox border
+      border-radius: 0 // Strictly Orthogonal
       padding: 5px
       & > button
         display: inline-block
         width: 100px
         height: 100px
-        border-radius: 10px
+        border-radius: 0 // Strictly Orthogonal
         margin: 3px 3px
         & > img
           width: 50px
           margin: auto
         &:hover
-          background-color: #5553
-
+          background-color: #3c3836
 </style>

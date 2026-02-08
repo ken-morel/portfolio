@@ -12,32 +12,29 @@
 
 <style lang="sass">
 .workspaces-container
-  border-top: 1px solid #242;
-  border-bottom: 1px solid #242;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  display: flex
+  flex-direction: row
+  height: 100%
+  align-items: center
 
-  border:
-    top: 1px white solid
-    bottom: 1px white solid
   button
     display: inline-block
-    width: 100%
+    width: auto // Auto-size width based on content
+    padding: 0 10px // Horizontal padding
+    margin: 0 !important
+    height: 100% // Fill the bar's height
     text-align: center
     color: #88c0d0
-    padding: 0px 0px;
-    margin: 0 !important
-    border-radius: 0%;
-    font-size: 15px;
-    font-family: "Firacode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome";
+    border: none // Ensure no default button border
+    border-radius: 0
+    font-size: 15px
+    font-family: "Firacode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome"
     &.active
       color: #81a1c1
-      background-color: #3b4252;
+      background-color: #3b4252
     &.urgent
       color: #bf616a
-      animation: urgent-flash 1s infinite;
+      animation: urgent-flash 1s infinite
     &:hover
-      background-color: #7b8292;
+      background-color: #7b8292
 </style>

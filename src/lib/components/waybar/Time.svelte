@@ -26,11 +26,15 @@
 
 <style lang="sass">
 div.waybar-time
-  margin: 5px 0
+  padding: 0 10px // Replaced vertical margin with horizontal padding
+  display: flex
+  align-items: center
+  height: 100%
+
   span
-    color: #aa77aa
-    margin: 0px 2px 0px 2px;
-    font-family: "Firacode Nerd Font Mono";
-    font-weight: bold;
-    font-size: 18px;
+    color: #ebdbb2 // Gruvbox foreground color
+    margin: 0 1px // Tighter margin for horizontal layout
+    font-family: "Firacode Nerd Font Mono"
+    font-weight: bold
+    font-size: 16px // Slightly smaller to fit the bar height
 </style>

@@ -1,10 +1,12 @@
 <script lang="ts">
   import Waybar from "$lib/components/Waybar.svelte";
   import Workspace from "./Workspace.svelte";
+  import Background from "$lib/components/Background.svelte"; // Import the new component
 
   let { children } = $props();
 </script>
 
+<Background />
 <div class="waybar-container">
   <Waybar />
 </div>
@@ -26,7 +28,4 @@
   height: 100vh
   margin: 0
   padding: 0
-  background-image: url("/arch-nord-dark.png")
-  background-size: cover
-  background-repeat: no-repeat
 </style>

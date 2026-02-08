@@ -19,6 +19,8 @@ div.workspace-content
   display: flex
   width: 100%
   height: 100vh
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center
+  align-items: center
+  padding: 10px
+  box-sizing: border-box
 </style>

@@ -4,6 +4,7 @@
   import Spotify from "./waybar/Spotify.svelte";
   import NWGBar from "./waybar/NWGBar.svelte";
   import Battery from "./waybar/Battery.svelte";
+  import Network from "./waybar/Network.svelte";
 </script>
 
 <div class="waybar">
@@ -15,6 +16,7 @@
     <Workspaces />
   </div>
   <div class="right">
+    <Network />
     <Battery />
     <NWGBar />
   </div>
